@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+/* Paleta "Tramuntana al vespre" */
+@theme {
+  --color-night: #16202d;
+  --color-deep: #1c2837;
+  --color-fog: #243245;
+  --color-line: #354659;
+  --color-bone: #ece7dd;
+  --color-dim: #a9b3bf;
+  --color-amber: #f0a04b;
+  --color-ember: #e0623a;
+
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+
+@layer base {
+  html {
+    background: var(--color-night);
+    color: var(--color-bone);
+    color-scheme: dark;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    font-family: var(--font-sans);
+    overflow-x: clip;
+  }
+  ::selection {
+    background: var(--color-amber);
+    color: var(--color-night);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-amber);
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  /* Etiqueta tipus HUD */
+  .hud {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .wrap {
+    width: 100%;
+    max-width: 1360px;
+    margin-inline: auto;
+    padding-inline: clamp(16px, 4vw, 56px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
