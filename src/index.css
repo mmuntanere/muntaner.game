@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
-/* Paleta "Tramuntana al vespre" */
+/* Paleta clara "paper": els noms dels tokens es mantenen, però night = fons de paper i bone = tinta blava. */
 @theme {
-  --color-night: #16202d;
-  --color-deep: #1c2837;
-  --color-fog: #243245;
-  --color-line: #354659;
-  --color-bone: #ece7dd;
-  --color-dim: #a9b3bf;
-  --color-amber: #f0a04b;
-  --color-ember: #e0623a;
+  --color-night: #f6f2e9;
+  --color-deep: #ece5d6;
+  --color-fog: #e3dbc9;
+  --color-line: #d4cab4;
+  --color-bone: #16202d;
+  --color-dim: #3f4d60;
+  --color-amber: #9a4a0a;
+  --color-ember: #b83a1c;
 
   --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
@@ -20,7 +20,7 @@
   html {
     background: var(--color-night);
     color: var(--color-bone);
-    color-scheme: dark;
+    color-scheme: light;
     -webkit-font-smoothing: antialiased;
   }
   body {

@@ -28,7 +28,7 @@ export function Contact() {
 
   return (
     <section id="contact" className="relative overflow-hidden border-t border-line" aria-labelledby="contact-title">
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-2/3 bg-[radial-gradient(60%_80%_at_70%_100%,rgba(240,160,75,0.13),transparent_70%)]" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-2/3 bg-[radial-gradient(60%_80%_at_70%_100%,rgba(154,74,10,0.07),transparent_70%)]" />
       <div className="wrap relative pb-28 pt-16 md:pb-40 md:pt-20">
         <p className="hud mb-5 text-dim">
           <span className="text-amber">05</span> — {t("contact.kicker")}

@@ -23,11 +23,11 @@ export function Projects() {
                   decoding="async"
                   className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-night/70 via-transparent to-night/20" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent" />
                 <div className="absolute left-4 top-4">
-                  <StatusChip status={p.status} className="bg-night/70 backdrop-blur-sm" />
+                  <StatusChip status={p.status} className="bg-night" />
                 </div>
-                <span className="hud absolute bottom-4 left-4 border border-bone/30 bg-night/60 px-2 py-1 text-[0.62rem] text-bone/80 backdrop-blur-sm">
+                <span className="hud absolute bottom-4 left-4 border border-line bg-night px-2 py-1 text-[0.62rem] text-bone">
                   {p.cover.conceptArt ? t("label.conceptArt") : t("label.gameArt")}
                 </span>
               </div>

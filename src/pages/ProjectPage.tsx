@@ -55,19 +55,20 @@ export function ProjectPage() {
   return (
     <article>
       {/* Capçalera a sang */}
-      <header className="relative flex min-h-[88svh] items-end overflow-hidden">
-        <img src={project.cover.src} alt={tr(project.cover.alt)} className="absolute inset-0 h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-night via-night/55 to-night/10" />
-        <div className="wrap relative pb-14 pt-32">
-          <Link to="/#projects" className="hud text-bone/80 hover:text-amber">
+      <header className="wrap pb-12 pt-32">
+        <div>
+          <Link to="/#projects" className="hud text-dim hover:text-amber">
             ← {t("case.back")}
           </Link>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <StatusChip status={project.status} />
             <ArtLabel shot={project.cover} />
           </div>
-          <h1 className="mt-5 font-display text-[clamp(3rem,9vw,8rem)] font-bold leading-[0.9] tracking-[-0.045em]">{project.title}</h1>
+          <h1 className="mt-5 font-display text-[clamp(2.8rem,8vw,7rem)] font-bold leading-[0.9] tracking-[-0.045em]">{project.title}</h1>
           <p className="mt-6 max-w-3xl font-display text-[clamp(1.2rem,2.2vw,1.7rem)] leading-snug text-bone/90">{tr(project.tagline)}</p>
+        </div>
+        <div className="mt-12 overflow-hidden border border-line bg-deep">
+          <img src={project.cover.src} alt={tr(project.cover.alt)} className="aspect-video w-full object-cover md:aspect-[21/9]" />
         </div>
       </header>
 
