@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { HorizonHero } from "@/components/ui/horizon-hero";
+import { Hero } from "@/components/sections/Hero";
 import { Pillars } from "@/components/sections/Pillars";
 import { Projects } from "@/components/sections/Projects";
 import { Approach } from "@/components/sections/Approach";
@@ -23,14 +23,7 @@ export function Home() {
 
   return (
     <>
-      <HorizonHero
-        kicker={t("hero.kicker")}
-        title="Miquel Muntaner"
-        lines={[t("hero.line1"), t("hero.line2")]}
-        stage2={{ title: t("hero.stage2.title"), lines: [t("hero.stage2.line1"), t("hero.stage2.line2")] }}
-        scrollLabel={t("hero.scroll")}
-        cta={{ label: t("hero.cta"), href: "#projects" }}
-      />
+      <Hero />
       <Projects />
       <Approach />
       <About />

@@ -9,7 +9,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: { three: ["three"], gsap: ["gsap", "@gsap/react"] },
+        manualChunks: { three: ["three"] },
       },
     },
   },

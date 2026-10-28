@@ -1,9 +1,4 @@
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useI18n } from "@/i18n";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const PILLARS = [
   { n: "01", title: "pillar1.title", text: "pillar1.text", icon: BookIcon },
@@ -11,87 +6,22 @@ const PILLARS = [
   { n: "03", title: "pillar3.title", text: "pillar3.text", icon: PulseIcon },
 ] as const;
 
-/*
-  La frase s'il·lumina paraula per paraula amb el scroll; després els tres pilars
-  entren d'un en un, amb una línia àmbar que es traça i una icona que es dibuixa.
-*/
 export function Pillars() {
-  const { t, lang } = useI18n();
-  const ref = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const section = ref.current;
-    if (!section) return;
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-    const ctx = gsap.context(() => {
-      section.querySelectorAll<SVGGeometryElement>(".draw").forEach((el) => {
-        const len = el.getTotalLength?.() ?? 200;
-        el.style.strokeDasharray = `${len}`;
-        el.style.strokeDashoffset = reduce ? "0" : `${len}`;
-      });
-      if (reduce) return;
-
-      // Paraules de la frase, de fosques a clares
-      gsap.fromTo(
-        ".pillars-word",
-        { opacity: 0.15 },
-        {
-          opacity: 1,
-          stagger: 0.08,
-          ease: "none",
-          scrollTrigger: { trigger: ".pillars-title", start: "top 85%", end: "bottom 45%", scrub: true, refreshPriority: -3 },
-        },
-      );
-
-      // Pilars d'un en un
-      gsap.utils.toArray<HTMLElement>(".pillar").forEach((pillar, i) => {
-        gsap.set(pillar, { y: 70, opacity: 0 });
-        gsap.set(pillar.querySelector(".pillar-line"), { scaleX: 0 });
-        ScrollTrigger.create({
-          trigger: ".pillars-grid",
-          start: `top ${85 - i * 12}%`,
-          once: true,
-          refreshPriority: -3,
-          onEnter: () => {
-            const tl = gsap.timeline();
-            tl.to(pillar, { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" })
-              .to(pillar.querySelector(".pillar-line"), { scaleX: 1, duration: 0.9, ease: "power2.inOut" }, "-=0.5")
-              .to(pillar.querySelectorAll(".draw"), { strokeDashoffset: 0, duration: 1.2, ease: "power2.out", stagger: 0.1 }, "-=0.7");
-          },
-        });
-      });
-    }, section);
-
-    return () => ctx.revert();
-  }, [lang]);
-
-  const words = t("pillars.title").split(" ");
-
+  const { t } = useI18n();
   return (
-    <section ref={ref} className="wrap pb-16 pt-8 md:pb-20" aria-labelledby="pillars-title">
+    <section className="wrap pb-16 pt-8 md:pb-20" aria-labelledby="pillars-title">
       <p className="hud mb-5 text-dim">
         <span className="text-amber">04</span> — {t("pillars.kicker")}
       </p>
-      <h2
-        id="pillars-title"
-        className="pillars-title max-w-5xl font-display text-[clamp(2.2rem,5.4vw,4.6rem)] font-semibold leading-[1.02] tracking-[-0.035em]"
-      >
-        {words.map((w, i) => (
-          <span key={i} className="pillars-word">
-            {w}{" "}
-          </span>
-        ))}
+      <h2 id="pillars-title" className="max-w-5xl font-display text-[clamp(2.2rem,5.4vw,4.6rem)] font-semibold leading-[1.02] tracking-[-0.035em]">
+        {t("pillars.title")}
       </h2>
 
-      <div className="pillars-grid mt-16 grid gap-10 md:grid-cols-3 md:gap-8">
+      <div className="mt-14 grid gap-10 md:grid-cols-3 md:gap-8">
         {PILLARS.map((p) => {
           const Icon = p.icon;
           return (
-            <article key={p.n} className="pillar relative pt-8">
-              <div className="absolute inset-x-0 top-0 h-px bg-line">
-                <div className="pillar-line h-px origin-left bg-amber" />
-              </div>
+            <article key={p.n} className="relative border-t border-amber/60 pt-8">
               <div className="flex items-center justify-between">
                 <p className="hud text-amber">{p.n}</p>
                 <div className="size-14 text-amber">
