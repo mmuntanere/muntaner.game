@@ -41,6 +41,16 @@ export const ui = {
   "hero.scroll": { ca: "Desplaça", es: "Desliza", en: "Scroll" },
   "hero.cta": { ca: "Veure projectes", es: "Ver proyectos", en: "See projects" },
 
+  /* --- Minijoc de la portada --- */
+  "game.play": { ca: "Joc: apaga el foc", es: "Juego: apaga el fuego", en: "Game: put out the fire" },
+  "game.douse": { ca: "Apaga el foc", es: "Apagar el fuego", en: "Put out the fire" },
+  "game.saved": { ca: "Apagats", es: "Apagados", en: "Out" },
+  "game.lost": { ca: "Perduts", es: "Perdidos", en: "Lost" },
+  "game.over": { ca: "Temps esgotat", es: "Se acabó el tiempo", en: "Time's up" },
+  "game.again": { ca: "Torna-ho a provar", es: "Otra vez", en: "Play again" },
+  "game.close": { ca: "Tanca", es: "Cerrar", en: "Close" },
+  "game.more": { ca: "Veure «Foc a la Serra»", es: "Ver «Foc a la Serra»", en: "See “Foc a la Serra”" },
+
   /* --- Pilars --- */
   "pillars.title": {
     ca: "Pedagogia, tecnologia i dades en un mateix projecte.",

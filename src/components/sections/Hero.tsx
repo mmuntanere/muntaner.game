@@ -1,7 +1,8 @@
 /*
   Portada simple i clara: es veu de seguida qui sóc, què faig i on anar.
-  Al fons, unes carenes suaus (SVG). El retrat és petit i discret.
+  Al fons, unes carenes suaus (SVG) amb un minijoc opcional. El retrat és petit i discret.
 */
+import { RidgeBand, RidgeGame } from "@/components/sections/HeroGame";
 import { PortraitSphere } from "@/components/ui/PortraitSphere";
 import { site } from "@/content/site";
 import { useI18n } from "@/i18n";
@@ -10,7 +11,7 @@ export function Hero() {
   const { t } = useI18n();
   return (
     <section className="relative isolate overflow-hidden" aria-labelledby="hero-title">
-      <Ridges />
+      <RidgeBand />
 
       <div className="wrap grid items-center gap-10 pb-36 pt-28 md:grid-cols-12 md:pb-40 md:pt-36">
         <div className="md:col-span-9">
@@ -51,19 +52,7 @@ export function Hero() {
           <PortraitSphere className="w-28 md:w-36" />
         </div>
       </div>
+      <RidgeGame />
     </section>
-  );
-}
-
-/* Carenes suaus al peu de la portada, en tons de paper i blau pàl·lid */
-function Ridges() {
-  return (
-    <svg aria-hidden="true" className="absolute inset-x-0 bottom-0 -z-10 h-48 w-full md:h-56" viewBox="0 0 1600 240" preserveAspectRatio="xMidYMax slice">
-      <circle cx="1330" cy="64" r="26" fill="#e8b878" opacity="0.55" />
-      <path d="M0 150 L140 110 L260 135 L380 80 L470 112 L600 60 L720 108 L840 50 L960 100 L1080 66 L1210 116 L1330 78 L1460 120 L1600 90 V240 H0Z" fill="#dfe6ee" />
-      <path d="M0 178 L120 146 L240 168 L360 118 L500 160 L620 112 L760 156 L900 104 L1040 150 L1180 122 L1320 168 L1460 130 L1600 160 V240 H0Z" fill="#cdd9e6" />
-      <path d="M0 208 L160 176 L300 198 L420 160 L560 192 L700 150 L860 190 L1000 160 L1140 198 L1290 168 L1440 200 L1600 180 V240 H0Z" fill="#b9c9db" />
-      <path d="M0 232 L200 214 L420 228 L640 210 L860 226 L1080 212 L1320 228 L1600 216 V240 H0Z" fill="#a4b7cd" />
-    </svg>
   );
 }

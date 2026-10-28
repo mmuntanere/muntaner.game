@@ -53,6 +53,24 @@
   }
 }
 
+/* Minijoc de la portada: cursor de gota i flames */
+.cursor-drop {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M16 3 C16 3 7 14 7 20 a9 9 0 0 0 18 0 C25 14 16 3 16 3Z' fill='%232b6cb0' stroke='white' stroke-width='1.6'/%3E%3C/svg%3E") 16 22, crosshair;
+}
+@keyframes flame-flicker {
+  0%, 100% { transform: scaleY(1) skewX(0deg); }
+  30% { transform: scaleY(1.1) skewX(-3deg); }
+  60% { transform: scaleY(0.94) skewX(3deg); }
+}
+@keyframes flame-pop {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
+}
+.flame-art {
+  transform-origin: 50% 100%;
+  animation: flame-pop 0.25s ease-out both, flame-flicker 0.55s ease-in-out 0.25s infinite;
+}
+
 /* Entrada de la portada */
 @keyframes rise {
   from { opacity: 0; transform: translateY(18px); }
