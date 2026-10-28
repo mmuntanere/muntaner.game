@@ -44,9 +44,9 @@ export const projects: Project[] = [
       src: "/img/projects/prl-cover.jpg",
       conceptArt: true,
       alt: {
-        ca: "Magatzem de nit amb riscos marcats en àmbar: un carretó, una persona en una escala sense arnès i un vessament.",
-        es: "Almacén de noche con riesgos marcados en ámbar: una carretilla, una persona en una escalera sin arnés y un derrame.",
-        en: "Warehouse at night with hazards outlined in amber: a forklift, a person on a ladder without a harness and a spill.",
+        ca: "Magatzem lluminós amb riscos marcats en taronja: un carretó, una persona en una escala sense arnès i un vessament.",
+        es: "Almacén luminoso con riesgos marcados en naranja: una carretilla, una persona en una escalera sin arnés y un derrame.",
+        en: "Bright warehouse with hazards outlined in orange: a forklift, a person on a ladder without a harness and a spill.",
       },
     },
     gallery: [
@@ -106,9 +106,9 @@ export const projects: Project[] = [
       },
     ],
     scenario: {
-      ca: "Torn de nit en un magatzem logístic, amb Meta Quest 3. La persona recorre els passadissos, detecta i marca els riscos i tria com actuar. Cada partida combina els riscos de manera diferent perquè no es pugui memoritzar.",
-      es: "Turno de noche en un almacén logístico, con Meta Quest 3. La persona recorre los pasillos, detecta y marca los riesgos y elige cómo actuar. Cada partida combina los riesgos de forma distinta para que no se pueda memorizar.",
-      en: "A night shift in a logistics warehouse, on Meta Quest 3. Trainees walk the aisles, spot and tag hazards, and choose how to respond. Each run combines hazards differently so it can't be memorised.",
+      ca: "Una jornada en un magatzem logístic, amb Meta Quest 3. La persona recorre els passadissos, detecta i marca els riscos i tria com actuar. Cada partida combina els riscos de manera diferent perquè no es pugui memoritzar.",
+      es: "Una jornada en un almacén logístico, con Meta Quest 3. La persona recorre los pasillos, detecta y marca los riesgos y elige cómo actuar. Cada partida combina los riesgos de forma distinta para que no se pueda memorizar.",
+      en: "A working day in a logistics warehouse, on Meta Quest 3. Trainees walk the aisles, spot and tag hazards, and choose how to respond. Each run combines hazards differently so it can't be memorised.",
     },
     measure: {
       ca: "Cada acció genera una declaració xAPI (risc detectat, temps, decisió) cap a un LRS, i un resum SCORM arriba al LMS de l'empresa. En acabar, el debriefing mostra el recorregut, els riscos trobats i els que s'han passat per alt.",
@@ -134,9 +134,9 @@ export const projects: Project[] = [
       src: "/img/projects/mallorca1229-hero.jpg",
       conceptArt: true,
       alt: {
-        ca: "La ciutat emmurallada de Madina Mayurqa al capvespre, amb l'alcàsser, el port i una flota que s'acosta per l'horitzó.",
-        es: "La ciudad amurallada de Madina Mayurqa al atardecer, con el alcázar, el puerto y una flota que se acerca por el horizonte.",
-        en: "The walled city of Madina Mayurqa at dusk, with the alcázar, the harbour and a fleet approaching on the horizon.",
+        ca: "La ciutat emmurallada de Madina Mayurqa a plena llum, amb l'alcàsser, el port i una flota que s'acosta per l'horitzó.",
+        es: "La ciudad amurallada de Madina Mayurqa a plena luz, con el alcázar, el puerto y una flota que se acerca por el horizonte.",
+        en: "The walled city of Madina Mayurqa in full daylight, with the alcázar, the harbour and a fleet approaching on the horizon.",
       },
     },
     gallery: [
@@ -215,9 +215,9 @@ export const projects: Project[] = [
       src: "/img/projects/nautica-hero.jpg",
       conceptArt: true,
       alt: {
-        ca: "Un veler amb mala mar al capvespre: el patró al timó, un tripulant a proa assenyalant una persona a l'aigua i un altre amb la ràdio VHF.",
-        es: "Un velero con mala mar al atardecer: el patrón al timón, un tripulante en proa señalando a una persona en el agua y otro con la radio VHF.",
-        en: "A sailing yacht in rough seas at dusk: the skipper at the helm, one crew member at the bow pointing at a person in the water, another on the VHF radio.",
+        ca: "Un veler en un dia de vent i onades: el patró al timó, un tripulant a proa assenyalant una persona a l'aigua i un altre amb la ràdio VHF.",
+        es: "Un velero en un día de viento y olas: el patrón al timón, un tripulante en proa señalando a una persona en el agua y otro con la radio VHF.",
+        en: "A sailing yacht on a windy, choppy day: the skipper at the helm, one crew member at the bow pointing at a person in the water, another on the VHF radio.",
       },
     },
     gallery: [
@@ -296,9 +296,9 @@ export const projects: Project[] = [
       src: "/img/projects/foc-hero.jpg",
       conceptArt: true,
       alt: {
-        ca: "La Serra de Tramuntana de nit amb un front de foc a la carena, un poble a la vall i un membre d'emergències d'esquena.",
-        es: "La Serra de Tramuntana de noche con un frente de fuego en la cresta, un pueblo en el valle y un miembro de emergencias de espaldas.",
-        en: "The Serra de Tramuntana at night with a fire front on the ridge, a village in the valley and a first responder seen from behind.",
+        ca: "La Serra de Tramuntana de dia amb un front de foc a la carena, un poble a la vall i un membre d'emergències d'esquena.",
+        es: "La Serra de Tramuntana de día con un frente de fuego en la cresta, un pueblo en el valle y un miembro de emergencias de espaldas.",
+        en: "The Serra de Tramuntana by day with a fire front on the ridge, a village in the valley and a first responder seen from behind.",
       },
     },
     gallery: [
